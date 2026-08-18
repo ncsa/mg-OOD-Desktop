@@ -1,15 +1,14 @@
 # Batch Connect app configuration file
 #
 ---
-cluster: 
+cluster:
   - 'magnus'
 
 # Define attribute values that aren't meant to be modified by the user within
 # the Dashboard form
 attributes:
 
-# specify widgets for user modifiable job settings
- 
+  # specify widgets for user modifiable job settings
   bc_reservation:
     label: "Name of reservation (leave empty if none)"
     widget: "text_field"
@@ -20,7 +19,7 @@ attributes:
     widget: "select"
     options:
       # - ["desktop-base","/sw/oodimages/desktop-base.sif"]
-      - ["desktop-rhel8.10-cuda130-py39","/usr/local/oodimages/desktop/desktop-rhel8.10-cuda130-py39-20251105.sif"]
+      - ["desktop-rhel8.10-cuda133-py39","/usr/local/oodimages/desktop/desktop-rhel8.10-cuda133-py39-20260820.sif"]
 
   bc_partition:
     label: "Partition"
@@ -46,7 +45,7 @@ attributes:
   bc_num_gpus:
     label: "Number of GPUs"
     widget: "number_field"
-#    max: "4"
+    # max: "4"
     min: "0"
 
   bc_duration:
